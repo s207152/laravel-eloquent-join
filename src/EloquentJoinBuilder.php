@@ -230,7 +230,7 @@ class EloquentJoinBuilder extends Builder
         return $currentTableAlias.'.'.$column;
     }
 
-    private function joinQuery($join, $relation, $relatedTableAlias)
+    protected function joinQuery($join, $relation, $relatedTableAlias)
     {
         /** @var Builder $relationQuery */
         $relationBuilder = $relation->getQuery();
